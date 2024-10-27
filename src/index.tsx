@@ -17,7 +17,7 @@ import type {
 } from './typings';
 import { defaultState } from './lib/store/context';
 import { useClipPathHash } from './lib/hooks/useClipPathHash';
-import { useCounterAnimation } from './lib/hooks/useCounterAnimation';}
+import { useCounterAnimation } from './lib/hooks/useCounterAnimation';
 import { G } from 'react-native-svg';
 
 export interface Props
