@@ -14,8 +14,8 @@ export const useLevelDimensions = () => {
     const innerBodyWidth = bodyWidth - strokeWidth;
     const innerBodyHeight = bodyHeight - strokeWidth;
     return {
-      x: padding + strokeWidth / 2 + outerGap,
-      y: padding + strokeWidth / 2 + outerGap,
+      x: padding + strokeWidth,
+      y: padding + strokeWidth,
       width: innerBodyWidth,
       height: innerBodyHeight,
     };
