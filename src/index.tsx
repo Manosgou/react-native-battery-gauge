@@ -5,7 +5,6 @@ import {
   BATTERY_METER,
   CANVAS_WIDTH,
   CHARGING_FLASH,
-  READING_TEXT,
 } from './lib/constants';
 import { Battery } from './lib/components/Battery';
 import { Canvas } from './lib/Canvas';
@@ -17,10 +16,8 @@ import type {
   TGaugeCustom,
 } from './typings';
 import { defaultState } from './lib/store/context';
-import { ReadingText } from './lib/components/ReadingText';
-import { useCounterAnimation } from './lib/hooks/useCounterAnimation';
 import { useClipPathHash } from './lib/hooks/useClipPathHash';
-import Charging from './lib/components/Charging';
+import { useCounterAnimation } from './lib/hooks/useCounterAnimation';}
 import { G } from 'react-native-svg';
 
 export interface Props
@@ -121,10 +118,6 @@ export const BatteryGauge: FC<Props> = ({
       ...customization[BATTERY_METER],
       ...noLowBatteryColor,
     },
-    [READING_TEXT]: {
-      ...defaultState.customization[READING_TEXT],
-      ...customization[READING_TEXT],
-    },
     [CHARGING_FLASH]: {
       ...defaultState.customization[CHARGING_FLASH],
       ...customization[CHARGING_FLASH],
@@ -134,13 +127,6 @@ export const BatteryGauge: FC<Props> = ({
   const newValue = useCounterAnimation({
     value: value,
     enabled: animated,
-  });
-  const chargingValue = useCounterAnimation({
-    startValue: chargingStartValue,
-    value: maxValue,
-    enabled: charging,
-    iterationCount: 'infinite',
-    duration: 2000,
   });
   return (
     <Canvas

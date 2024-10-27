@@ -1,19 +1,20 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   BATTERY_BODY,
   BATTERY_METER,
   CLIP_METER,
   CLIP_METER_FILLED,
 } from '../constants';
-import {useGaugeContext} from '../hooks/useGaugeContext';
-import {useLevelDimensions} from '../hooks/useLevelDimensions';
-import {checkBatteryFill, getVisibleCellsCount} from '../utils';
-import {G, Rect, Defs, ClipPath} from 'react-native-svg';
+import { useGaugeContext } from '../hooks/useGaugeContext';
+import { useLevelDimensions } from '../hooks/useLevelDimensions';
+import { checkBatteryFill, getVisibleCellsCount } from '../utils';
+import { G, Rect, Defs, ClipPath } from 'react-native-svg';
+import { ColorValue } from 'react-native';
 
 export const BatteryLevel = () => {
-  const [colorFill, setColorFill] = useState<String>();
-  const {value, maxValue, customization, clipPathHash} = useGaugeContext();
-  const {x, y, width, height} = useLevelDimensions();
+  const [colorFill, setColorFill] = useState<ColorValue>();
+  const { value, maxValue, customization, clipPathHash } = useGaugeContext();
+  const { x, y, width, height } = useLevelDimensions();
   const {
     fill,
     lowBatteryFill,
@@ -25,7 +26,7 @@ export const BatteryLevel = () => {
     noOfCells,
     interCellsGap,
   } = customization[BATTERY_METER];
-  const {strokeWidth: bodyStrokeWidth, cornerRadius: bodyCornerRadius} =
+  const { strokeWidth: bodyStrokeWidth, cornerRadius: bodyCornerRadius } =
     customization[BATTERY_BODY];
 
   const cellList = useMemo(() => {
@@ -64,7 +65,7 @@ export const BatteryLevel = () => {
         </ClipPath>
         {noOfCells < 2 && gradFill && (
           <linearGradient id={'levelGradient' + clipPathHash}>
-            {gradFill.map(item => {
+            {gradFill.map((item) => {
               return (
                 <stop
                   key={item.color}
