@@ -1,4 +1,4 @@
-import {SVGProps} from 'react';
+import { SVGProps } from 'react';
 
 type ShapeStyles = {
   strokeWidth: number;
@@ -21,16 +21,7 @@ export type TGaugeCustom = {
     outerGap: number;
     noOfCells: number;
     interCellsGap: number;
-    gradFill?: {color: string; offset: number}[];
-  };
-  readingText: SVGProps<SVGTextElement> & {
-    lightContrastColor: ShapeStyles['fill'];
-    darkContrastColor: ShapeStyles['fill'];
-    lowBatteryColor: ShapeStyles['fill'];
-    mediumBatteryColor: ShapeStyles['fill'];
-    fontFamily: string;
-    fontSize: number;
-    showPercentage: boolean;
+    gradFill?: { color: string; offset: number }[];
   };
   chargingFlash: SVGProps<SVGPathElement> & {
     scale?: number;

@@ -68,11 +68,6 @@ export interface Props
    */
   charging?: boolean;
   /**
-   * Format the visible reading text as per your need
-   * Note: you can turn off percentage symbol from customizations
-   */
-  formatValue?: FormatValue;
-  /**
    * All components customization
    */
   customization?: DeepPartial<TGaugeCustom>;
@@ -90,7 +85,6 @@ export const BatteryGauge: FC<Props> = ({
   orientation = defaultState.orientation,
   animated = defaultState.animated,
   charging = defaultState.charging,
-  formatValue = value,
   ...restSvgProps
 }) => {
   const canvasHeight = Math.round(CANVAS_WIDTH * aspectRatio);
