@@ -16,8 +16,8 @@ export const useLevelDimensions = () => {
     return {
       x: padding + strokeWidth / 2 + outerGap,
       y: padding + strokeWidth / 2 + outerGap,
-      width: innerBodyWidth - 2 * outerGap,
-      height: innerBodyHeight - 2 * outerGap,
+      width: innerBodyWidth,
+      height: innerBodyHeight,
     };
   }, [bodyWidth, bodyHeight, outerGap, padding, strokeWidth]);
 };

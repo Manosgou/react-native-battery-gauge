@@ -16,14 +16,14 @@ export const defaultState = {
   charging: false,
   customization: {
     batteryBody: {
-      strokeWidth: 4,
+      strokeWidth: 2,
       cornerRadius: 6,
       fill: 'none',
       strokeColor: '#111',
     },
     batteryCap: {
       fill: 'none',
-      strokeWidth: 4,
+      strokeWidth: 2,
       strokeColor: '#111',
       cornerRadius: 2,
       capToBodyRatio: 0.4,

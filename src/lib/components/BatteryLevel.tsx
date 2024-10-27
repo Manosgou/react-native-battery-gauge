@@ -63,6 +63,7 @@ export const BatteryLevel = () => {
             height={height}
           />
         </ClipPath>
+
         {noOfCells < 2 && gradFill && (
           <linearGradient id={'levelGradient' + clipPathHash}>
             {gradFill.map((item) => {
