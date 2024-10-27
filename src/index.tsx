@@ -152,7 +152,6 @@ export const BatteryGauge: FC<Props> = ({
       >
         <Battery />
         <BatteryLevel />
-        {/* {charging ? <Charging /> : <ReadingText formatValue={formatValue} />} */}
         {children}
       </G>
     </Canvas>
