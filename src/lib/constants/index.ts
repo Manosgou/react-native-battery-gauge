@@ -1,5 +1,5 @@
-export const CANVAS_WIDTH = 10;
-const CANVAS_HEIGHT = 7;
+export const CANVAS_WIDTH = 100;
+const CANVAS_HEIGHT = 52;
 
 export const BATTERY_ASPECT_RATIO = CANVAS_HEIGHT / CANVAS_WIDTH; // battery is horizontal
 export const BATTERY_BODY = 'batteryBody';
